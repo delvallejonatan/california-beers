@@ -5,12 +5,13 @@
     .module('modules.searchBeer')
     .controller('ModulesSearchBeerController', ModulesSearchBeerController);
 
-  ModulesSearchBeerController.$inject = ['$timeout', 'beersService'];
+  ModulesSearchBeerController.$inject = ['$timeout', 'beersService', 'alcoholRangeFilter'];
 
-  function ModulesSearchBeerController($timeout, beersService) {
+  function ModulesSearchBeerController($timeout, beersService, alcoholRangeFilter) {
     var vm = this;
 
     // Data
+    vm.filteredBeers = [];
     vm.loading = true;
     vm.open = false;
     vm.beerColors = ['#fbf0cb', '#ffdd79', '#e19726', '#9d5107', '#6e1500', '#320300', '#181717'];
@@ -31,6 +32,7 @@
       beersService.getAll()
         .then(function(data){
           vm.beers = data;
+          angular.copy(data, vm.filteredBeers);
           _hideLoading();
         })
         .catch(function(err){
@@ -59,6 +61,7 @@
     }
 
     function onRangeChange() {
+      vm.filteredBeers = alcoholRangeFilter(vm.beers, vm.alcoholRange);
       vm.beer = null;
       vm.query = null;
     }

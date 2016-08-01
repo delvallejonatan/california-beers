@@ -9,10 +9,11 @@
 
   function alcoholRange() {
     return function(beers, range) {
-      if (!beers || !range) { return beers; }
+      var rangeNumber = Number(range);
+      if (!beers || !rangeNumber) { return beers; }
 
       return beers.filter(function(beer) {
-        return beer.Abv <= range;
+        return beer.Abv <= rangeNumber;
       });
     };
   }

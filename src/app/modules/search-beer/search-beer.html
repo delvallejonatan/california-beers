@@ -7,7 +7,7 @@
         <div class="bottle spin"></div>
         <div class="circle show" ng-class="{'hide': vm.loading}">
           <h2 class="sub-title">Choose <br> yours</h2>
-          <md-autocomplete required md-input-name="autocomplete" force-select md-selected-item='vm.beer' , md-search-text='vm.query' , md-items='beer in vm.beers | alcoholRange: vm.alcoholRange' , md-item-text='beer.Name' , md-min-length="1" placeholder="Beer Name" ng-disabled="vm.open">
+          <md-autocomplete required md-input-name="autocomplete" force-select md-selected-item='vm.beer' md-search-text='vm.query' md-items='beer in vm.filteredBeers | filter:vm.query' md-item-text='beer.Name' md-min-length="1" placeholder="Beer Name" ng-disabled="vm.open" md-no-cache="true">
             <md-item-template>
               <span md-highlight-text="vm.query" md-highlight-flags="^i"> {{beer.Name}}
               </span>

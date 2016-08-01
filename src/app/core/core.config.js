@@ -5,9 +5,9 @@
     .module('app.core')
     .config(coreConfig);
 
-  coreConfig.$inject = ['$locationProvider', '$urlRouterProvider'];
+  coreConfig.$inject = ['$urlRouterProvider'];
 
-  function coreConfig($locationProvider, $urlRouterProvider) {
+  function coreConfig($urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
   }
 

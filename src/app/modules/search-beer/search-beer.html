@@ -16,7 +16,7 @@
               No beers matching "{{vm.query}}" were found.
             </md-not-found>
           </md-autocomplete>
-          <input class="range" name="slider" type="range" min="4" max="15" step="1" ng-model='vm.alcoholRange' ng-change='vm.filterBeers()' ng-disabled="vm.open"/>
+          <input class="range" name="slider" type="range" min="4" max="15" step="1" ng-model='vm.alcoholRange' ng-change='vm.onRangeChange()' ng-disabled="vm.open"/>
           <p class="range-description">3.3 - <span>{{vm.alcoholRange}}</span> % Alcohol</p>
         </div>
       </div>

@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 13px/1.6 'MicrobrewOne3DW01-Regular', Helvetica, Arial;
+  background-image: url('../../assets/bg.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 450px;
+  height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: $primary;
+}

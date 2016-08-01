@@ -1,0 +1,42 @@
+<section class="modules-search-beer" ng-class="{'open': vm.open}">
+  <form name="beerForm">
+
+    <h1 class="loading" ng-class="{'show': vm.loading}">Loading</h1>
+    <div class="content">
+      <div class="container">
+        <div class="bottle spin"></div>
+        <div class="circle show" ng-class="{'hide': vm.loading}">
+          <h2 class="sub-title">Choose <br> yours</h2>
+          <md-autocomplete required md-input-name="autocomplete" force-select md-selected-item='vm.beer' , md-search-text='vm.query' , md-items='beer in vm.beers | alcoholRange: vm.alcoholRange' , md-item-text='beer.Name' , md-min-length="1" placeholder="Beer Name" ng-disabled="vm.open">
+            <md-item-template>
+              <span md-highlight-text="vm.query" md-highlight-flags="^i"> {{beer.Name}}
+              </span>
+            </md-item-template>
+            <md-not-found>
+              No beers matching "{{vm.query}}" were found.
+            </md-not-found>
+          </md-autocomplete>
+          <input class="range" name="slider" type="range" min="4" max="15" step="1" ng-model='vm.alcoholRange' ng-change='vm.filterBeers()' ng-disabled="vm.open"/>
+          <p class="range-description">3.3 - <span>{{vm.alcoholRange}}</span> % Alcohol</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="beer-show desplace" style="background-color: {{vm.backgroundColor}};" ng-class="{'hide': vm.loading}">
+      <button class="circle-show spin-half" ng-click="vm.toggleOpen()" ng-disabled='beerForm.autocomplete.$modelValue === " " || beerForm.$invalid || beerForm.$pristine'>
+        <span class='tooltip'>Select a Beer</span>
+      </button>
+      <div class="label" style="color: {{vm.labelColor}};">
+        <div class="name">{{vm.beer.Name}}</div>
+        <div class="tag" ng-if='vm.beer.Tags !== "?"'>{{vm.beer.Tags | tags}}</div>
+        <div class="City" ng-if='vm.beer.City !== "?"'>{{vm.beer.City}}</div>
+        <div class="company" ng-if='vm.beer.Brewery !== "?"'>{{vm.beer.Brewery}}</div>
+        <div class="alcohol">{{vm.beer.Abv}}% Alcohol</div>
+        <div class="tag" ng-if='vm.beer.Srm !== "?"'>{{vm.beer.Srm}}</div>
+        <div class="tag" ng-if='vm.beer.Ibu !== "?"'>{{vm.beer.Ibu}}</div>
+      </div>
+      <div ng-include="'app/modules/search-beer/template/bubbles.html'"></div>
+    </div>
+
+  </form>
+</section>

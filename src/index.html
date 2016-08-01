@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <style>
+      /* This helps the ng-show/ng-hide animations start at the right place. */
+      /* Since Angular has this but needs to load, this gives us the class early. */
+
+      .ng-hide {
+        display: none!important;
+      }
+    </style>
+    <meta charset="utf-8"/>
+    <title>California Beers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/styles/app.css">
+    <!-- endinject -->
+  </head>
+  <body ui-view>
+    <!-- inject:vendor:js -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/angular-animate/angular-animate.js"></script>
+    <script src="/angular-aria/angular-aria.js"></script>
+    <script src="/angular-messages/angular-messages.js"></script>
+    <script src="/angular-material/angular-material.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/app/services/services.module.js"></script>
+    <script src="/app/services/beers/beers.service.js"></script>
+    <script src="/app/modules/search-beer/search-beer.module.js"></script>
+    <script src="/app/modules/search-beer/search-beer.route.js"></script>
+    <script src="/app/modules/search-beer/search-beer.controller.js"></script>
+    <script src="/app/filters/filters.module.js"></script>
+    <script src="/app/filters/tags/tags.filter.js"></script>
+    <script src="/app/filters/alcohol-range/alcohol-range.filter.js"></script>
+    <script src="/app/directives/directives.module.js"></script>
+    <script src="/app/directives/force-select/force-select.directive.js"></script>
+    <script src="/app/modules/modules.module.js"></script>
+    <script src="/app/main/main.module.js"></script>
+    <script src="/app/main/main.route.js"></script>
+    <script src="/app/main/main.controller.js"></script>
+    <script src="/app/core/core.module.js"></script>
+    <script src="/app/core/core.config.js"></script>
+    <script src="/app/app.module.js"></script>
+    <script src="/california-beers-templates.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

@@ -1,0 +1,292 @@
+.modules-search-beer {
+  .loading {
+    font-size: 60px;
+    display: block;
+    display: none;
+    float: right;
+    margin-right: 55px;
+    margin-top: 5px;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    &:after {
+      content: ' .';
+      animation: dots 1s steps(5, end) infinite;
+    }
+  }
+
+  .tooltip {
+    opacity: 0;
+  }
+
+  [disabled] {
+    cursor: default !important;
+
+    .tooltip {
+      transform: rotate(180deg);
+      color: $white;
+      width: 120px;
+      position: absolute;
+      padding: 5px;
+      top: 46px;
+      right: 55px;
+      border-radius: 5px;
+      background-color: rgba(0,0,0,.54);
+      height: 32px;
+      line-height: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    &:hover {
+      .tooltip {
+        opacity: 1;
+        transition: opacity .3s ease;
+      }
+    }
+  }
+
+  .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 98;
+
+    .container {
+      position: relative;
+      bottom: 54px;
+
+      .bottle {
+        background-image: url('../../assets/bottle.png');
+        background-repeat: no-repeat;
+        background-size: 146px;
+        width: 145px;
+        height: 430px;
+        position: relative;
+        z-index: 2;
+        right: 100px;
+      }
+
+      .circle {
+        position: absolute;
+        height: 215px;
+        width: 226px;
+        right: -80px;
+        top: -10px;
+        background-size: 94%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $accent;
+        border-radius: 50%;
+        z-index: 1;
+        display: block;
+
+        &.hide {
+          display: none;
+        }
+
+        .sub-title {
+          color: $white;
+          text-align: center;
+          margin-top: 24px;
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 3px;
+        }
+
+        .range {
+          display: block;
+          margin: auto;
+          cursor: pointer;
+          margin-top: 12px;
+          margin-bottom: 6px;
+        }
+
+        .range-description {
+          color: $white;
+          text-align: center;
+          font-size: 17px;
+        }
+
+        .beer-name {
+          color: $white;
+          text-align: center;
+          font-size: 19px;
+          border-bottom: 1px solid $white;
+          width: 110px;
+          margin: auto;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .beer-show {
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    transition: height .4s ease;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 320px;
+    height: 8vh;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    display: block;
+
+    &.hide {
+      display: none;
+    }
+
+    .circle-show {
+      position: absolute;
+      top: -20px;
+      left: 60%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $accent;
+      background-image: url('../../assets/arrow-1.svg');
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      transition: top .3s ease;
+      z-index: 99;
+      transform: rotate(180deg);
+      outline: none;
+
+      &:hover {
+        &:not([disabled]) {
+          background-image: url('../../assets/arrow-2.svg');
+          top: -25px;
+        }
+      }
+    }
+
+    .label {
+      padding: 25px;
+      bottom: 0;
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+      text-align: right;
+      opacity: 0;
+      transition: opacity .4s ease;
+      padding: 10px;
+      z-index: 9;
+      font-weight: lighter;
+      line-height: 25px;
+
+      .name {
+        font-size: 31px;
+        margin-bottom: 5px;
+      }
+
+      .City {
+        font-size: 25px;
+        margin-bottom: 5px;
+      }
+
+      .company,
+      .alcohol {
+        font-size: 21px;
+        margin-bottom: 5px;
+      }
+
+      .tag {
+        font-size: 17px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .bubbles {
+      opacity: 0;
+      transition: opacity .3s ease-out;
+    }
+  }
+
+  &.open {
+    .circle-show {
+      &:hover {
+        top: -15px !important;
+      }
+    }
+
+    .beer-show {
+      height: 50vh;
+      transition: height .5s ease;
+    }
+
+    .circle {
+      display:none;
+    }
+
+    .spin-half {
+      transform: none;
+    }
+
+    .label {
+      opacity: 1;
+      transition: opacity .4s ease;
+    }
+
+    .bubbles {
+      opacity: 1;
+      transition: opacity .3s ease-out;
+    }
+  }
+
+  md-autocomplete {
+    min-width: 140px;
+    width: 140px;
+    margin: auto;
+    border-radius: 0;
+
+    button {
+      background-color: $accent;
+      margin-top: 6px;
+      position: absolute;
+      color: $accent;
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+
+      md-icon {
+        transform: translate3d(-50%,-50%,0) scale(0.7);
+      }
+    }
+
+    /*csslint important: false*/
+    input {
+      background-color: $accent !important;
+      color: $white;
+      font-family: $font-family;
+      border-bottom: 1px solid $white !important;
+      font-size: 16px !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    md-autocomplete-wrap {
+      box-shadow: none !important;
+    }
+    /*csslint important: true*/
+
+    aria-status {
+      p {
+        display: none;
+      }
+    }
+  }
+}

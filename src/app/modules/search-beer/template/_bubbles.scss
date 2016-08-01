@@ -1,0 +1,36 @@
+/* properties with the same value */
+
+$b: 200;
+
+// Bubbles wrap
+.bubbles {
+  position: absolute; left:0; right:0; top:0; bottom:0; z-index: 2;
+  background: linear-gradient(#fff, #fff 1%, rgba(255,255,255,0) 5%, rgba(255,255,255,0));
+}
+
+.bubble {
+  z-index:3; position:absolute; bottom:100%;
+  background: radial-gradient(#fffbe6, #fffbe6 10%, #ffe34d), radial-gradient(#ffdf33, #ccac00);
+  border-radius:50%;
+
+  @for $i from 1 through $b {
+    &:nth-child(#{$i}) {
+      $size: random(32);
+      animation: (random(5) + 0s) bubble ease-in infinite;
+      animation-delay: (random(222)+0s) / 100;
+      height: $size+px;
+      left: random(100) + 0%;
+      width: $size+px;
+
+      @if $size < 35px { opacity:0.6; z-index:-1; }
+      @if $size < 25px { opacity:0.4; z-index:-2; }
+    }
+  }
+
+}
+
+// Animations
+@keyframes bubble {
+  from { bottom:0; }
+  to   { bottom:100%; opacity:0; }
+}

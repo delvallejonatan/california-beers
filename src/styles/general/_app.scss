@@ -1,0 +1,12 @@
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  .title {
+    font-size: 56px;
+    color: $accent;
+    margin: 0;
+    line-height: 55px;
+  }
+}

@@ -76,11 +76,11 @@
     }
 
     function _hideLoading() {
-      //Force a 2 second delay so we can see loading.
+      //Force a 2.5 second delay so we can see loading.
       //Just for testing purpose
       $timeout(function() {
         vm.loading = false;
-      }, 2000);
+      }, 2500);
     }
 
   }

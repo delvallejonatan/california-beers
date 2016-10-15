@@ -80,7 +80,7 @@
       //Just for testing purpose
       $timeout(function() {
         vm.loading = false;
-      }, 2500);
+      }, 700);
     }
 
   }

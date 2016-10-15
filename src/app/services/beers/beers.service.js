@@ -15,7 +15,7 @@
     return service;
 
     function getAll() {
-      return $http.get('http://localhost:3000/beers')
+      return $http.get('https://california-beers.herokuapp.com/beers')
       .then(function(res) {
         return res.data.map(_parseBeerAbv);
       });

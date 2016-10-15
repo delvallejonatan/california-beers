@@ -15,6 +15,7 @@
       first: 'California',
       second: 'Beers'
     };
+    vm.year = new Date().getFullYear();
 
   }
 })();

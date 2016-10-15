@@ -4,5 +4,3 @@
 
 npm install;
 bower install;
-cd server;
-npm install;

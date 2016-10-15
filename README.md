@@ -1,7 +1,7 @@
 California Beers
 ============
 
-This web app shows californians beers generated from [this app](https://github.com/andrewmtoy/beer-app)
+This web app shows californians beers generated from [this app](https://github.com/delvallejonatan/beer-app)
 
 Use node `>=6.3` and npm `>=3.10.3`
 

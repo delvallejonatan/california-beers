@@ -5,7 +5,8 @@
   "scripts": {
     "start": "gulp serve",
     "test": "karma start karma.conf.js --single-run",
-    "build": "gulp dist"
+    "build": "gulp dist",
+    "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {},
   "devDependencies": {

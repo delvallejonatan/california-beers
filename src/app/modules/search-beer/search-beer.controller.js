@@ -5,9 +5,9 @@
     .module('modules.searchBeer')
     .controller('ModulesSearchBeerController', ModulesSearchBeerController);
 
-  ModulesSearchBeerController.$inject = ['$timeout', 'beersService', 'alcoholRangeFilter'];
+  ModulesSearchBeerController.$inject = ['beersService', 'alcoholRangeFilter'];
 
-  function ModulesSearchBeerController($timeout, beersService, alcoholRangeFilter) {
+  function ModulesSearchBeerController(beersService, alcoholRangeFilter) {
     var vm = this;
 
     // Data
@@ -33,7 +33,7 @@
         .then(function(data){
           vm.beers = data;
           angular.copy(data, vm.filteredBeers);
-          _hideLoading();
+          vm.loading = false;
         })
         .catch(function(err){
           console.err(err);
@@ -73,14 +73,6 @@
     function _compareLastTwo(val, arr) {
       var leng = arr.length;
       return leng >= 2 && (val === arr[leng-1] || val === arr[leng-2]);
-    }
-
-    function _hideLoading() {
-      //Force a 2.5 second delay so we can see loading.
-      //Just for testing purpose
-      $timeout(function() {
-        vm.loading = false;
-      }, 700);
     }
 
   }

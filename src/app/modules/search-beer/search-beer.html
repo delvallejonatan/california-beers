@@ -35,7 +35,10 @@
         <div class="tag" ng-if='vm.beer.Srm !== "?"'>{{vm.beer.Srm}}</div>
         <div class="tag" ng-if='vm.beer.Ibu !== "?"'>{{vm.beer.Ibu}}</div>
       </div>
-      <div ng-include="'app/modules/search-beer/template/bubbles.html'"></div>
+      <!-- <div ng-include="'app/modules/search-beer/template/bubbles.html'"></div> -->
+      <div class='bubbles'>
+        <div class='bubble' ng-repeat='i in vm.bubbles(100) track by $index'></div>
+      </div>
     </div>
 
   </form>

@@ -5,10 +5,11 @@
     .module('app.core')
     .config(coreConfig);
 
-  coreConfig.$inject = ['$urlRouterProvider'];
+  coreConfig.$inject = ['$urlRouterProvider', '$locationProvider'];
 
-  function coreConfig($urlRouterProvider) {
+  function coreConfig($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode(true);
   }
 
 })();

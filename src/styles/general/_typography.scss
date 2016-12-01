@@ -1,5 +1,9 @@
-@font-face {
-  font-family: "MicrobrewOne3DW01-Regular";
-  src: url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.eot");
-  src: url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.woff") format("woff"), url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/e268f65b1679d62d682d7dfb61875008.svg#MicrobrewOne3DW01-Regular") format("svg");
+// @import url("https://db.onlinewebfonts.com/c/e268f65b1679d62d682d7dfb61875008?family=MicrobrewOne3DW01-Regular");
+@font-face {font-family: "Microbrew One 3D W01 Regular";
+  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot"); /* IE9*/
+  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff2") format("woff2"), /* chrome、firefox */
+  url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff") format("woff"), /* chrome、firefox */
+  url("../../assets/font/e268f65b1679d62d682d7dfb61875008.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../../assets/font/e268f65b1679d62d682d7dfb61875008.svg#Microbrew One 3D W01 Regular") format("svg"); /* iOS 4.1- */
 }

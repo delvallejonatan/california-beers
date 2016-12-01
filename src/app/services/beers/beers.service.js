@@ -21,10 +21,9 @@
       });
     }
 
-    // For filter porpuses all beers with '?' alcohol avg were set to minimum alcohol abv (3.3)
     function _parseBeerAbv(beer) {
       if (beer.Abv === '?') {
-        beer.Abv = 3.3;
+        beer.Abv = 4.5;
       } else {
         beer.Abv = Number(beer.Abv.slice(0, -1));
       }

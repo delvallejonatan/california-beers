@@ -27,7 +27,7 @@ $arrow-2: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0
   }
 
   [disabled] {
-    cursor: default !important;
+    cursor: not-allowed !important;
 
     .tooltip {
       transform: rotate(180deg);

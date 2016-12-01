@@ -10,6 +10,11 @@ header {
     line-height: 55px;
   }
 
+  .title2 {
+    display: none;
+    color: $accent;
+  }
+
   .copyright {
     color: $accent;
     font-size: 14px;

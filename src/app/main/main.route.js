@@ -9,7 +9,7 @@
 
   var template = '<section ng-controller=\'MainController as vm\' ng-cloak>\n' +
   '  <header>\n' +
-  '    <h1 class="title"> {{vm.title.first}} <br> #{{vm.title.second}}</h1>\n' + '<h1 class="title2"> {{vm.title.first}} #{{vm.title.second}}</h1>\n' +
+  '    <h1 class="title"> {{vm.title.first}} <br> #{{vm.title.second}}</h1>\n' + '<h1 class="title2"> {{vm.title.first}} {{vm.title.second}}</h1>\n' +
   '    <a class="copyright" target="_blank" href="http://www.joni.website/">{{vm.year}} with ❤ by delvallejonatan</a>\n' +
   '  </header>\n' +
   '  <div ui-view></div>\n' +

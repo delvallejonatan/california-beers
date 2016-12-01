@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+npm run build;
 cd dist;
 echo "californiabeers.us" > CNAME;
 cd ..;

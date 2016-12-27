@@ -11,12 +11,12 @@
     "src"
   ],
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-ui-router": "^0.3.1",
-    "angular-material": "^1.0.9"
+    "angular": "1.5.8",
+    "angular-ui-router": "0.3.1",
+    "angular-material": "1.0.9"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.8"
+    "angular-mocks": "1.5.8"
   },
   "resolutions": {
     "angular": "1.5.8"

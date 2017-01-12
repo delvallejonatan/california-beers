@@ -23,7 +23,7 @@ Go to `http://localhost:8080` in your browser.
 `npm test`
 
 
-## Production ready build - a.k.a. dist
+## Production ready
 
 `npm run build`
 

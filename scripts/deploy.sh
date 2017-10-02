@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 npm run build;
+cd dist;		
+echo "californiabeers.zone" > CNAME;		
+cd ..;
 git commit -am "Save local changes";
 git checkout -B gh-pages;
 git add -f dist;

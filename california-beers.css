@@ -1,0 +1,2334 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: inherit; }
+
+.clear:before, .clear:after {
+  content: ' ';
+  display: table; }
+
+.clear {
+  *zoom: 1; }
+
+.clear:after {
+  clear: both; }
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility; }
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  overflow: hidden; }
+
+body {
+  font: 300 13px/1.6 'Microbrew One 3D W01 Regular', Helvetica, Arial;
+  background-image: url("../../assets/bg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 450px;
+  height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #fded18; }
+
+@font-face {
+  font-family: "Microbrew One 3D W01 Regular";
+  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot");
+  /* IE9*/
+  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot?#iefix") format("embedded-opentype"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff2") format("woff2"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff") format("woff"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.ttf") format("truetype"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.svg#Microbrew One 3D W01 Regular") format("svg");
+  /* iOS 4.1- */ }
+
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::-webkit-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+/*csslint important: false*/
+@media (max-width: 710px) {
+  animation: none !important;
+  header {
+    top: 10px !important;
+    left: 10px !important; }
+    header h1.title {
+      display: none; }
+    header h1.title2 {
+      display: block;
+      font-size: 15px;
+      line-height: 10px; }
+  .modules-search-beer h1.loading {
+    font-size: 15px;
+    margin-right: 30px;
+    margin-top: 10px; }
+  .modules-search-beer .beer-show .circle-show {
+    left: 82% !important; }
+  .modules-search-beer .content {
+    transform: none !important;
+    margin: 27.7%;
+    margin-top: 131px;
+    top: initial !important;
+    left: initial !important; }
+  .modules-search-beer [disabled] .tooltip {
+    right: -120px !important; }
+  .modules-search-beer.open .label {
+    transform: scale(0.7);
+    right: -45px !important; } }
+
+/*csslint important: true*/
+@keyframes start {
+  0% {
+    transform: scale(0.3); }
+  70% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes show {
+  0% {
+    transform: rotateY(-90deg);
+    right: 25px; }
+  60% {
+    transform: rotateY(-90deg);
+    right: 25px; }
+  100% {
+    transform: rotateY(0deg);
+    right: -83px; } }
+
+@keyframes desplace {
+  0% {
+    transform: translateY(90px); }
+  60% {
+    transform: translateY(90px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes dots {
+  0%, 20% {
+    color: transparent;
+    text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent; }
+  40% {
+    color: #222222;
+    text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent; }
+  60% {
+    text-shadow: 0.25em 0 0 #222222, 0.5em 0 0 transparent; }
+  80%, 100% {
+    text-shadow: 0.25em 0 0 #222222, 0.5em 0 0 #222222; } }
+
+.animation {
+  -webkit-animation: start .6s ease-in-out;
+  -moz-animation: start .6s ease-in-out;
+  animation: start .6s ease-in-out; }
+
+.spin {
+  -webkit-animation: spin .5s ease-in-out;
+  -moz-animation: spin .5s ease-in-out;
+  animation: spin .5s ease-in-out; }
+
+.show {
+  -webkit-animation: show 1s ease;
+  -moz-animation: show .1s ease;
+  animation: show 1s ease; }
+
+.desplace {
+  -webkit-animation: desplace 1s ease;
+  -moz-animation: desplace 1s ease;
+  animation: desplace 1s ease; }
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px; }
+  header .title {
+    font-size: 56px;
+    color: #222222;
+    margin: 0;
+    line-height: 55px; }
+  header .title2 {
+    display: none;
+    color: #222222; }
+  header .copyright {
+    color: #222222;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+.modules-search-beer .loading {
+  font-size: 60px;
+  display: block;
+  display: none;
+  float: right;
+  margin-right: 55px;
+  margin-top: 5px;
+  display: none; }
+  .modules-search-beer .loading.show {
+    display: block; }
+  .modules-search-beer .loading:after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite; }
+
+.modules-search-beer .tooltip {
+  opacity: 0; }
+
+.modules-search-beer [disabled] {
+  cursor: not-allowed !important; }
+  .modules-search-beer [disabled] .tooltip {
+    transform: rotate(180deg);
+    color: #fff;
+    width: 120px;
+    position: absolute;
+    padding: 5px;
+    top: 46px;
+    right: 55px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.54);
+    height: 32px;
+    line-height: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .3s ease; }
+  .modules-search-beer [disabled]:hover .tooltip {
+    opacity: 1;
+    transition: opacity .3s ease; }
+
+.modules-search-beer .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 98; }
+  .modules-search-beer .content .container {
+    position: relative;
+    bottom: 54px; }
+    .modules-search-beer .content .container .bottle {
+      background-image: url("../../assets/bottle.png");
+      background-repeat: no-repeat;
+      background-size: 146px;
+      width: 145px;
+      height: 430px;
+      position: relative;
+      z-index: 2;
+      right: 100px; }
+    .modules-search-beer .content .container .circle {
+      position: absolute;
+      height: 215px;
+      width: 226px;
+      right: -80px;
+      top: -10px;
+      background-size: 94%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #222222;
+      border-radius: 50%;
+      z-index: 1;
+      display: block; }
+      .modules-search-beer .content .container .circle.hide {
+        display: none; }
+      .modules-search-beer .content .container .circle .sub-title {
+        color: #fff;
+        text-align: center;
+        margin-top: 24px;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 3px; }
+      .modules-search-beer .content .container .circle .range {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        margin-top: 12px;
+        margin-bottom: 6px; }
+      .modules-search-beer .content .container .circle .range-description {
+        color: #fff;
+        text-align: center;
+        font-size: 17px; }
+      .modules-search-beer .content .container .circle .beer-name {
+        color: #fff;
+        text-align: center;
+        font-size: 19px;
+        border-bottom: 1px solid #fff;
+        width: 110px;
+        margin: auto;
+        outline: none; }
+
+.modules-search-beer .beer-show {
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+  transition: height .4s ease;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 320px;
+  height: 8vh;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  display: block; }
+  .modules-search-beer .beer-show.hide {
+    display: none; }
+  .modules-search-beer .beer-show .circle-show {
+    position: absolute;
+    top: -20px;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #222222;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNzEuOTA2IDcxLjkwNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzEuOTA2IDcxLjkwNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmZmY7IiBkPSJNMzUuOTU0LDU4LjYyM2MtMC41NTMsMC0xLTAuNDQ4LTEtMVYxYzAtMC41NTIsMC40NDctMSwxLTFzMSwwLjQ0OCwxLDF2NTYuNjIzQzM2Ljk1NCw1OC4xNzUsMzYuNTA2LDU4LjYyMywzNS45NTQsNTguNjIzCgkJeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZmZjsiIGQ9Ik0zNS45NTQsNjAuODY0Yy0wLjI1NiwwLTAuNTEyLTAuMDk4LTAuNzA3LTAuMjkzbC05Ljg5Ni05Ljg5NmMtMC4zOTEtMC4zOTEtMC4zOTEtMS4wMjMsMC0xLjQxNHMxLjAyMy0wLjM5MSwxLjQxNCwwCgkJbDkuODk2LDkuODk2YzAuMzkxLDAuMzkxLDAuMzkxLDEuMDIzLDAsMS40MTRDMzYuNDY1LDYwLjc2NywzNi4yMDksNjAuODY0LDM1Ljk1NCw2MC44NjR6Ii8+Cgk8cGF0aCAgc3R5bGU9ImZpbGw6I2ZmZjsiIGQ9Ik0zNS45NTQsNjAuODY0Yy0wLjI1NiwwLTAuNTEyLTAuMDk4LTAuNzA3LTAuMjkzYy0wLjM5MS0wLjM5MS0wLjM5MS0xLjAyMywwLTEuNDE0bDkuOTkxLTkuOTkKCQljMC4zOTEtMC4zOTEsMS4wMjMtMC4zOTEsMS40MTQsMHMwLjM5MSwxLjAyMywwLDEuNDE0bC05Ljk5MSw5Ljk5QzM2LjQ2NSw2MC43NjcsMzYuMjA5LDYwLjg2NCwzNS45NTQsNjAuODY0eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZmZjsiIGQ9Ik0zNS45NjMsNzEuOTA2Yy0yLjEwNCwwLTQuMjAzLTAuMTgyLTYuMjQ5LTAuNTRjLTAuNTQ0LTAuMDk1LTAuOTA3LTAuNjEzLTAuODEzLTEuMTU3czAuNjA1LTAuOTA4LDEuMTU4LTAuODEzCgkJYzEuOTMxLDAuMzM4LDMuOTE0LDAuNTA5LDUuODk0LDAuNTA5bDAuMTUyLDBjMC41NTMsMCwxLDAuNDQ4LDEsMXMtMC40NDcsMS0xLDFMMzUuOTYzLDcxLjkwNnogTTQyLjE2OSw3MS4zNTUKCQljLTAuNDc1LDAtMC44OTYtMC4zMzktMC45ODMtMC44MjNjLTAuMDk4LTAuNTQzLDAuMjY0LTEuMDYzLDAuODA4LTEuMTYxYzEuOTQtMC4zNDksMy44Ni0wLjg3MSw1LjcwNy0xLjU1MQoJCWMwLjUxOC0wLjE5MiwxLjA5MywwLjA3NCwxLjI4NCwwLjU5M2MwLjE5LDAuNTE4LTAuMDc0LDEuMDkzLTAuNTkzLDEuMjg0Yy0xLjk1NiwwLjcyMS0zLjk5LDEuMjczLTYuMDQ1LDEuNjQzCgkJQzQyLjI4OCw3MS4zNSw0Mi4yMjgsNzEuMzU1LDQyLjE2OSw3MS4zNTV6IE0yNC4wMDQsNjkuODExYy0wLjExMywwLTAuMjI5LTAuMDItMC4zNDItMC4wNjFjLTEuOTU5LTAuNzEzLTMuODctMS42MDQtNS42NzktMi42NQoJCWMtMC40NzktMC4yNzYtMC42NDMtMC44ODgtMC4zNjYtMS4zNjZjMC4yNzYtMC40NzgsMC44ODktMC42NDMsMS4zNjYtMC4zNjVjMS43MDksMC45ODcsMy41MTMsMS44MjksNS4zNjIsMi41MDEKCQljMC41MiwwLjE4OSwwLjc4NywwLjc2MywwLjU5OCwxLjI4MkMyNC43OTYsNjkuNTU5LDI0LjQxMyw2OS44MTEsMjQuMDA0LDY5LjgxMXogTTUzLjU1MSw2Ny4xNmMtMC4zNDQsMC0wLjY3OS0wLjE3Ny0wLjg2NC0wLjQ5NgoJCWMtMC4yNzgtMC40NzctMC4xMTgtMS4wODksMC4zNTktMS4zNjhjMS42OTktMC45OTIsMy4zMjQtMi4xNDEsNC44MjktMy40MTVjMC40MjQtMC4zNTcsMS4wNTMtMC4zMDUsMS40MSwwLjExNwoJCWMwLjM1NiwwLjQyMSwwLjMwNCwxLjA1My0wLjExNywxLjQwOWMtMS41OTUsMS4zNDktMy4zMTUsMi41NjYtNS4xMTQsMy42MTZDNTMuODk2LDY3LjExNiw1My43MjIsNjcuMTYsNTMuNTUxLDY3LjE2egoJCSBNMTMuNDk2LDYzLjczOWMtMC4yMjcsMC0wLjQ1NC0wLjA3Ny0wLjY0Mi0wLjIzNGMtMS42LTEuMzQyLTMuMDkxLTIuODMyLTQuNDMyLTQuNDI3Yy0wLjM1NS0wLjQyMy0wLjMwMS0xLjA1NCwwLjEyMi0xLjQwOQoJCXMxLjA1My0wLjMwMSwxLjQwOSwwLjEyMmMxLjI2NywxLjUwNywyLjY3NSwyLjkxNCw0LjE4Niw0LjE4MmMwLjQyMywwLjM1NSwwLjQ3OSwwLjk4NiwwLjEyMywxLjQwOQoJCUMxNC4wNjUsNjMuNjE4LDEzLjc4Miw2My43MzksMTMuNDk2LDYzLjczOXogTTYyLjgxMSw1OS4zMjFjLTAuMjI2LDAtMC40NTItMC4wNzYtMC42NC0wLjIzMgoJCWMtMC40MjQtMC4zNTQtMC40ODEtMC45ODQtMC4xMjgtMS40MDhjMS4yNjQtMS41MTYsMi40MDEtMy4xNSwzLjM4MS00Ljg1NmMwLjI3NC0wLjQ4LDAuODg1LTAuNjQ2LDEuMzY1LTAuMzcKCQljMC40NzksMC4yNzUsMC42NDUsMC44ODYsMC4zNjksMS4zNjVjLTEuMDM3LDEuODA3LTIuMjQxLDMuNTM3LTMuNTc4LDUuMTQyQzYzLjM4Miw1OS4xOTksNjMuMDk4LDU5LjMyMSw2Mi44MTEsNTkuMzIxegoJCSBNNS42OSw1NC40NTJjLTAuMzQ1LDAtMC42ODEtMC4xNzktMC44NjYtMC40OTljLTEuMDQ2LTEuODA1LTEuOTM4LTMuNzEzLTIuNjU0LTUuNjcxQzEuOTgsNDcuNzYzLDIuMjQ3LDQ3LjE4OSwyLjc2Niw0NwoJCWMwLjUxOS0wLjE4OCwxLjA5MywwLjA3OCwxLjI4MiwwLjU5NmMwLjY3NiwxLjg1LDEuNTE5LDMuNjUxLDIuNTA2LDUuMzU1YzAuMjc3LDAuNDc4LDAuMTE0LDEuMDktMC4zNjQsMS4zNjcKCQlDNi4wMzMsNTQuNDA5LDUuODYsNTQuNDUyLDUuNjksNTQuNDUyeiBNNjguODQ5LDQ4Ljc5NGMtMC4xMTIsMC0wLjIyOC0wLjAyLTAuMzQtMC4wNmMtMC41Mi0wLjE4OC0wLjc4OC0wLjc2LTAuNjAxLTEuMjgKCQljMC42NjctMS44NDgsMS4xNzQtMy43NzEsMS41MDgtNS43MTdjMC4wOTMtMC41NDQsMC42MDMtMC45MDcsMS4xNTQtMC44MTdjMC41NDQsMC4wOTQsMC45MSwwLjYxLDAuODE2LDEuMTU1CgkJYy0wLjM1NCwyLjA2Mi0wLjg5MSw0LjEtMS41OTgsNi4wNThDNjkuNjQzLDQ4LjU0MSw2OS4yNTgsNDguNzk0LDY4Ljg0OSw0OC43OTR6IE0xLjUzMSw0My4wNThjLTAuNDc3LDAtMC44OTgtMC4zNDEtMC45ODQtMC44MjcKCQlDMC4xODcsNDAuMTg4LDAuMDAzLDM4LjA4OCwwLDM1Ljk5M0MwLDM1LjQ0LDAuNDQ3LDM0Ljk5MiwxLDM0Ljk5MUgxYzAuNTUyLDAsMC45OTksMC40NDcsMSwwLjk5OQoJCWMwLjAwMywxLjk4MSwwLjE3NywzLjk2NCwwLjUxNyw1Ljg5NWMwLjA5NiwwLjU0NC0wLjI2OSwxLjA2My0wLjgxMywxLjE1OEMxLjY0Niw0My4wNTMsMS41ODgsNDMuMDU4LDEuNTMxLDQzLjA1OHoKCQkgTTcwLjkwNiwzNi44MzljLTAuNTUxLDAtMC45OTgtMC40NDYtMS0wLjk5N2MtMC4wMDYtMS45NzctMC4xODQtMy45NTktMC41MjgtNS44OTJjLTAuMDk3LTAuNTQ0LDAuMjY1LTEuMDYzLDAuODA5LTEuMTYKCQljMC41NDMtMC4wOTUsMS4wNjMsMC4yNjUsMS4xNiwwLjgwOWMwLjM2NSwyLjA0NiwwLjU1NCw0LjE0NSwwLjU2LDYuMjM4YzAuMDAyLDAuNTUyLTAuNDQ1LDEuMDAxLTAuOTk3LDEuMDAzCgkJQzcwLjkwOCwzNi44MzksNzAuOTA3LDM2LjgzOSw3MC45MDYsMzYuODM5eiBNMS41MTksMzAuOTI1Yy0wLjA1NywwLTAuMTE0LTAuMDA1LTAuMTcyLTAuMDE1CgkJYy0wLjU0NS0wLjA5NS0wLjkwOS0wLjYxMy0wLjgxNC0xLjE1N0MwLjg5LDI3LjcsMS40MzEsMjUuNjYzLDIuMTQyLDIzLjdjMC4xODgtMC41MTksMC43NTgtMC43ODYsMS4yODEtMC42CgkJYzAuNTE5LDAuMTg4LDAuNzg3LDAuNzYyLDAuNiwxLjI4MWMtMC42NzEsMS44NTQtMS4xODMsMy43NzctMS41Miw1LjcxNkMyLjQxOCwzMC41ODMsMS45OTcsMzAuOTI1LDEuNTE5LDMwLjkyNXogTTY4Ljc3MiwyNC44OTYKCQljLTAuNDA3LDAtMC43OS0wLjI1MS0wLjkzOC0wLjY1NWMtMC42NzktMS44NDYtMS41MjYtMy42NDUtMi41MTktNS4zNDljLTAuMjc3LTAuNDc4LTAuMTE2LTEuMDksMC4zNjEtMS4zNjgKCQljMC40NzgtMC4yNzksMS4wODktMC4xMTcsMS4zNjcsMC4zNjFjMS4wNTEsMS44MDUsMS45NDgsMy43MTEsMi42NjcsNS42NjZjMC4xOSwwLjUxOS0wLjA3NSwxLjA5My0wLjU5NCwxLjI4NAoJCUM2OS4wMDMsMjQuODc2LDY4Ljg4NiwyNC44OTYsNjguNzcyLDI0Ljg5NnogTTUuNjUyLDE5LjUxN2MtMC4xNjksMC0wLjM0MS0wLjA0My0wLjQ5OC0wLjEzNAoJCWMtMC40NzktMC4yNzUtMC42NDQtMC44ODctMC4zNjctMS4zNjZjMS4wNC0xLjgwNCwyLjI0Ny0zLjUzMiwzLjU4OS01LjEzNGMwLjM1My0wLjQyMiwwLjk4NC0wLjQ4LDEuNDA4LTAuMTI1CgkJYzAuNDI0LDAuMzU0LDAuNDc5LDAuOTg1LDAuMTI1LDEuNDA5Yy0xLjI2NywxLjUxNC0yLjQwNywzLjE0NS0zLjM5LDQuODQ5QzYuMzM0LDE5LjMzNyw1Ljk5OCwxOS41MTcsNS42NTIsMTkuNTE3egoJCSBNNjIuNjY5LDE0LjQxM2MtMC4yODUsMC0wLjU2Ny0wLjEyMS0wLjc2NS0wLjM1NWMtMS4yNzEtMS41MDQtMi42ODItMi45MDgtNC4xOTUtNC4xNzJjLTAuNDI0LTAuMzU0LTAuNDc5LTAuOTg1LTAuMTI2LTEuNDA5CgkJYzAuMzU0LTAuNDI0LDAuOTgzLTAuNDgxLDEuNDA5LTAuMTI2YzEuNjAyLDEuMzM4LDMuMDk2LDIuODI1LDQuNDM5LDQuNDE3YzAuMzU2LDAuNDIyLDAuMzA0LDEuMDUzLTAuMTE4LDEuNDA5CgkJQzYzLjEyNSwxNC4zMzUsNjIuODk3LDE0LjQxMyw2Mi42NjksMTQuNDEzeiBNMTMuNDQ0LDEwLjIxM2MtMC4yODUsMC0wLjU2OC0wLjEyMS0wLjc2Ni0wLjM1NQoJCWMtMC4zNTUtMC40MjItMC4zMDItMS4wNTMsMC4xMi0xLjQwOWMxLjU5OC0xLjM0NiwzLjMyLTIuNTU5LDUuMTIyLTMuNjA1YzAuNDczLTAuMjc4LDEuMDg5LTAuMTE2LDEuMzY2LDAuMzYyCgkJYzAuMjc4LDAuNDc4LDAuMTE1LDEuMDktMC4zNjIsMS4zNjdjLTEuNzAxLDAuOTg4LTMuMzI4LDIuMTM0LTQuODM3LDMuNDA1QzEzLjksMTAuMTM2LDEzLjY3LDEwLjIxMywxMy40NDQsMTAuMjEzeiBNNTMuMzU1LDYuNjMzCgkJYy0wLjE2OSwwLTAuMzQxLTAuMDQzLTAuNDk3LTAuMTMzYy0xLjcxMS0wLjk4My0zLjUxNy0xLjgyMS01LjM2Ny0yLjQ5Yy0wLjUyLTAuMTg4LTAuNzg4LTAuNzYxLTAuNjAxLTEuMjgKCQljMC4xODgtMC41MiwwLjc2Mi0wLjc4NywxLjI4LTAuNjAxYzEuOTYsMC43MDgsMy44NzIsMS41OTUsNS42ODQsMi42MzdjMC40NzksMC4yNzUsMC42NDUsMC44ODYsMC4zNjksMS4zNjUKCQlDNTQuMDM4LDYuNDUzLDUzLjcwMiw2LjYzMyw1My4zNTUsNi42MzN6IE0yMy45MzIsNC4xMjNjLTAuNDA3LDAtMC43OTEtMC4yNTEtMC45MzktMC42NTdjLTAuMTg5LTAuNTE5LDAuMDc3LTEuMDkzLDAuNTk2LTEuMjgzCgkJYzEuOTU3LTAuNzE3LDMuOTkzLTEuMjY2LDYuMDQ5LTEuNjNjMC41NTUtMC4wOTIsMS4wNjMsMC4yNjcsMS4xNTksMC44MTFjMC4wOTcsMC41NDQtMC4yNjcsMS4wNjMtMC44MSwxLjE1OQoJCWMtMS45NDEsMC4zNDQtMy44NjMsMC44NjEtNS43MTEsMS41MzhDMjQuMTYzLDQuMTAzLDI0LjA0Niw0LjEyMywyMy45MzIsNC4xMjN6IE00MS45NDUsMi41MTFjLTAuMDU3LDAtMC4xMTMtMC4wMDQtMC4xNzEtMC4wMTUKCQlDMzkuODY2LDIuMTY3LDM3LjkwNywyLDM1Ljk1NCwyYy0wLjU1MywwLTEuMDM4LTAuNDQ3LTEuMDM4LTFjMC0wLjU1MywwLjQwOS0xLDAuOTYyLTF2MWwwLjA1Ny0xYzAuMDAxLDAsMC4wMDIsMCwwLjAwNCwwCgkJYzIuMDg1LDAsNC4xNTYsMC4xNzcsNi4xNzYsMC41MjZjMC41NDUsMC4wOTQsMC45MDksMC42MTEsMC44MTUsMS4xNTZDNDIuODQ1LDIuMTY4LDQyLjQyMiwyLjUxMSw0MS45NDUsMi41MTF6Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: top .3s ease;
+    z-index: 99;
+    transform: rotate(180deg);
+    outline: none; }
+    .modules-search-beer .beer-show .circle-show:hover:not([disabled]) {
+      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNzEuOTA2IDcxLjkwNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzEuOTA2IDcxLjkwNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNmZGVkMTg7IiBkPSJNMzUuOTU0LDU4LjYyM2MtMC41NTMsMC0xLTAuNDQ4LTEtMVYxYzAtMC41NTIsMC40NDctMSwxLTFzMSwwLjQ0OCwxLDF2NTYuNjIzQzM2Ljk1NCw1OC4xNzUsMzYuNTA2LDU4LjYyMywzNS45NTQsNTguNjIzCgkJeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I2ZkZWQxODsiIGQ9Ik0zNS45NTQsNjAuODY0Yy0wLjI1NiwwLTAuNTEyLTAuMDk4LTAuNzA3LTAuMjkzbC05Ljg5Ni05Ljg5NmMtMC4zOTEtMC4zOTEtMC4zOTEtMS4wMjMsMC0xLjQxNHMxLjAyMy0wLjM5MSwxLjQxNCwwCgkJbDkuODk2LDkuODk2YzAuMzkxLDAuMzkxLDAuMzkxLDEuMDIzLDAsMS40MTRDMzYuNDY1LDYwLjc2NywzNi4yMDksNjAuODY0LDM1Ljk1NCw2MC44NjR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojZmRlZDE4OyIgZD0iTTM1Ljk1NCw2MC44NjRjLTAuMjU2LDAtMC41MTItMC4wOTgtMC43MDctMC4yOTNjLTAuMzkxLTAuMzkxLTAuMzkxLTEuMDIzLDAtMS40MTRsOS45OTEtOS45OQoJCWMwLjM5MS0wLjM5MSwxLjAyMy0wLjM5MSwxLjQxNCwwczAuMzkxLDEuMDIzLDAsMS40MTRsLTkuOTkxLDkuOTlDMzYuNDY1LDYwLjc2NywzNi4yMDksNjAuODY0LDM1Ljk1NCw2MC44NjR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojZmRlZDE4OyIgZD0iTTM1Ljk2Myw3MS45MDZjLTIuMTA0LDAtNC4yMDMtMC4xODItNi4yNDktMC41NGMtMC41NDQtMC4wOTUtMC45MDctMC42MTMtMC44MTMtMS4xNTdzMC42MDUtMC45MDgsMS4xNTgtMC44MTMKCQljMS45MzEsMC4zMzgsMy45MTQsMC41MDksNS44OTQsMC41MDlsMC4xNTIsMGMwLjU1MywwLDEsMC40NDgsMSwxcy0wLjQ0NywxLTEsMUwzNS45NjMsNzEuOTA2eiBNNDIuMTY5LDcxLjM1NQoJCWMtMC40NzUsMC0wLjg5Ni0wLjMzOS0wLjk4My0wLjgyM2MtMC4wOTgtMC41NDMsMC4yNjQtMS4wNjMsMC44MDgtMS4xNjFjMS45NC0wLjM0OSwzLjg2LTAuODcxLDUuNzA3LTEuNTUxCgkJYzAuNTE4LTAuMTkyLDEuMDkzLDAuMDc0LDEuMjg0LDAuNTkzYzAuMTksMC41MTgtMC4wNzQsMS4wOTMtMC41OTMsMS4yODRjLTEuOTU2LDAuNzIxLTMuOTksMS4yNzMtNi4wNDUsMS42NDMKCQlDNDIuMjg4LDcxLjM1LDQyLjIyOCw3MS4zNTUsNDIuMTY5LDcxLjM1NXogTTI0LjAwNCw2OS44MTFjLTAuMTEzLDAtMC4yMjktMC4wMi0wLjM0Mi0wLjA2MWMtMS45NTktMC43MTMtMy44Ny0xLjYwNC01LjY3OS0yLjY1CgkJYy0wLjQ3OS0wLjI3Ni0wLjY0My0wLjg4OC0wLjM2Ni0xLjM2NmMwLjI3Ni0wLjQ3OCwwLjg4OS0wLjY0MywxLjM2Ni0wLjM2NWMxLjcwOSwwLjk4NywzLjUxMywxLjgyOSw1LjM2MiwyLjUwMQoJCWMwLjUyLDAuMTg5LDAuNzg3LDAuNzYzLDAuNTk4LDEuMjgyQzI0Ljc5Niw2OS41NTksMjQuNDEzLDY5LjgxMSwyNC4wMDQsNjkuODExeiBNNTMuNTUxLDY3LjE2Yy0wLjM0NCwwLTAuNjc5LTAuMTc3LTAuODY0LTAuNDk2CgkJYy0wLjI3OC0wLjQ3Ny0wLjExOC0xLjA4OSwwLjM1OS0xLjM2OGMxLjY5OS0wLjk5MiwzLjMyNC0yLjE0MSw0LjgyOS0zLjQxNWMwLjQyNC0wLjM1NywxLjA1My0wLjMwNSwxLjQxLDAuMTE3CgkJYzAuMzU2LDAuNDIxLDAuMzA0LDEuMDUzLTAuMTE3LDEuNDA5Yy0xLjU5NSwxLjM0OS0zLjMxNSwyLjU2Ni01LjExNCwzLjYxNkM1My44OTYsNjcuMTE2LDUzLjcyMiw2Ny4xNiw1My41NTEsNjcuMTZ6CgkJIE0xMy40OTYsNjMuNzM5Yy0wLjIyNywwLTAuNDU0LTAuMDc3LTAuNjQyLTAuMjM0Yy0xLjYtMS4zNDItMy4wOTEtMi44MzItNC40MzItNC40MjdjLTAuMzU1LTAuNDIzLTAuMzAxLTEuMDU0LDAuMTIyLTEuNDA5CgkJczEuMDUzLTAuMzAxLDEuNDA5LDAuMTIyYzEuMjY3LDEuNTA3LDIuNjc1LDIuOTE0LDQuMTg2LDQuMTgyYzAuNDIzLDAuMzU1LDAuNDc5LDAuOTg2LDAuMTIzLDEuNDA5CgkJQzE0LjA2NSw2My42MTgsMTMuNzgyLDYzLjczOSwxMy40OTYsNjMuNzM5eiBNNjIuODExLDU5LjMyMWMtMC4yMjYsMC0wLjQ1Mi0wLjA3Ni0wLjY0LTAuMjMyCgkJYy0wLjQyNC0wLjM1NC0wLjQ4MS0wLjk4NC0wLjEyOC0xLjQwOGMxLjI2NC0xLjUxNiwyLjQwMS0zLjE1LDMuMzgxLTQuODU2YzAuMjc0LTAuNDgsMC44ODUtMC42NDYsMS4zNjUtMC4zNwoJCWMwLjQ3OSwwLjI3NSwwLjY0NSwwLjg4NiwwLjM2OSwxLjM2NWMtMS4wMzcsMS44MDctMi4yNDEsMy41MzctMy41NzgsNS4xNDJDNjMuMzgyLDU5LjE5OSw2My4wOTgsNTkuMzIxLDYyLjgxMSw1OS4zMjF6CgkJIE01LjY5LDU0LjQ1MmMtMC4zNDUsMC0wLjY4MS0wLjE3OS0wLjg2Ni0wLjQ5OWMtMS4wNDYtMS44MDUtMS45MzgtMy43MTMtMi42NTQtNS42NzFDMS45OCw0Ny43NjMsMi4yNDcsNDcuMTg5LDIuNzY2LDQ3CgkJYzAuNTE5LTAuMTg4LDEuMDkzLDAuMDc4LDEuMjgyLDAuNTk2YzAuNjc2LDEuODUsMS41MTksMy42NTEsMi41MDYsNS4zNTVjMC4yNzcsMC40NzgsMC4xMTQsMS4wOS0wLjM2NCwxLjM2NwoJCUM2LjAzMyw1NC40MDksNS44Niw1NC40NTIsNS42OSw1NC40NTJ6IE02OC44NDksNDguNzk0Yy0wLjExMiwwLTAuMjI4LTAuMDItMC4zNC0wLjA2Yy0wLjUyLTAuMTg4LTAuNzg4LTAuNzYtMC42MDEtMS4yOAoJCWMwLjY2Ny0xLjg0OCwxLjE3NC0zLjc3MSwxLjUwOC01LjcxN2MwLjA5My0wLjU0NCwwLjYwMy0wLjkwNywxLjE1NC0wLjgxN2MwLjU0NCwwLjA5NCwwLjkxLDAuNjEsMC44MTYsMS4xNTUKCQljLTAuMzU0LDIuMDYyLTAuODkxLDQuMS0xLjU5OCw2LjA1OEM2OS42NDMsNDguNTQxLDY5LjI1OCw0OC43OTQsNjguODQ5LDQ4Ljc5NHogTTEuNTMxLDQzLjA1OGMtMC40NzcsMC0wLjg5OC0wLjM0MS0wLjk4NC0wLjgyNwoJCUMwLjE4Nyw0MC4xODgsMC4wMDMsMzguMDg4LDAsMzUuOTkzQzAsMzUuNDQsMC40NDcsMzQuOTkyLDEsMzQuOTkxSDFjMC41NTIsMCwwLjk5OSwwLjQ0NywxLDAuOTk5CgkJYzAuMDAzLDEuOTgxLDAuMTc3LDMuOTY0LDAuNTE3LDUuODk1YzAuMDk2LDAuNTQ0LTAuMjY5LDEuMDYzLTAuODEzLDEuMTU4QzEuNjQ2LDQzLjA1MywxLjU4OCw0My4wNTgsMS41MzEsNDMuMDU4egoJCSBNNzAuOTA2LDM2LjgzOWMtMC41NTEsMC0wLjk5OC0wLjQ0Ni0xLTAuOTk3Yy0wLjAwNi0xLjk3Ny0wLjE4NC0zLjk1OS0wLjUyOC01Ljg5MmMtMC4wOTctMC41NDQsMC4yNjUtMS4wNjMsMC44MDktMS4xNgoJCWMwLjU0My0wLjA5NSwxLjA2MywwLjI2NSwxLjE2LDAuODA5YzAuMzY1LDIuMDQ2LDAuNTU0LDQuMTQ1LDAuNTYsNi4yMzhjMC4wMDIsMC41NTItMC40NDUsMS4wMDEtMC45OTcsMS4wMDMKCQlDNzAuOTA4LDM2LjgzOSw3MC45MDcsMzYuODM5LDcwLjkwNiwzNi44Mzl6IE0xLjUxOSwzMC45MjVjLTAuMDU3LDAtMC4xMTQtMC4wMDUtMC4xNzItMC4wMTUKCQljLTAuNTQ1LTAuMDk1LTAuOTA5LTAuNjEzLTAuODE0LTEuMTU3QzAuODksMjcuNywxLjQzMSwyNS42NjMsMi4xNDIsMjMuN2MwLjE4OC0wLjUxOSwwLjc1OC0wLjc4NiwxLjI4MS0wLjYKCQljMC41MTksMC4xODgsMC43ODcsMC43NjIsMC42LDEuMjgxYy0wLjY3MSwxLjg1NC0xLjE4MywzLjc3Ny0xLjUyLDUuNzE2QzIuNDE4LDMwLjU4MywxLjk5NywzMC45MjUsMS41MTksMzAuOTI1eiBNNjguNzcyLDI0Ljg5NgoJCWMtMC40MDcsMC0wLjc5LTAuMjUxLTAuOTM4LTAuNjU1Yy0wLjY3OS0xLjg0Ni0xLjUyNi0zLjY0NS0yLjUxOS01LjM0OWMtMC4yNzctMC40NzgtMC4xMTYtMS4wOSwwLjM2MS0xLjM2OAoJCWMwLjQ3OC0wLjI3OSwxLjA4OS0wLjExNywxLjM2NywwLjM2MWMxLjA1MSwxLjgwNSwxLjk0OCwzLjcxMSwyLjY2Nyw1LjY2NmMwLjE5LDAuNTE5LTAuMDc1LDEuMDkzLTAuNTk0LDEuMjg0CgkJQzY5LjAwMywyNC44NzYsNjguODg2LDI0Ljg5Niw2OC43NzIsMjQuODk2eiBNNS42NTIsMTkuNTE3Yy0wLjE2OSwwLTAuMzQxLTAuMDQzLTAuNDk4LTAuMTM0CgkJYy0wLjQ3OS0wLjI3NS0wLjY0NC0wLjg4Ny0wLjM2Ny0xLjM2NmMxLjA0LTEuODA0LDIuMjQ3LTMuNTMyLDMuNTg5LTUuMTM0YzAuMzUzLTAuNDIyLDAuOTg0LTAuNDgsMS40MDgtMC4xMjUKCQljMC40MjQsMC4zNTQsMC40NzksMC45ODUsMC4xMjUsMS40MDljLTEuMjY3LDEuNTE0LTIuNDA3LDMuMTQ1LTMuMzksNC44NDlDNi4zMzQsMTkuMzM3LDUuOTk4LDE5LjUxNyw1LjY1MiwxOS41MTd6CgkJIE02Mi42NjksMTQuNDEzYy0wLjI4NSwwLTAuNTY3LTAuMTIxLTAuNzY1LTAuMzU1Yy0xLjI3MS0xLjUwNC0yLjY4Mi0yLjkwOC00LjE5NS00LjE3MmMtMC40MjQtMC4zNTQtMC40NzktMC45ODUtMC4xMjYtMS40MDkKCQljMC4zNTQtMC40MjQsMC45ODMtMC40ODEsMS40MDktMC4xMjZjMS42MDIsMS4zMzgsMy4wOTYsMi44MjUsNC40MzksNC40MTdjMC4zNTYsMC40MjIsMC4zMDQsMS4wNTMtMC4xMTgsMS40MDkKCQlDNjMuMTI1LDE0LjMzNSw2Mi44OTcsMTQuNDEzLDYyLjY2OSwxNC40MTN6IE0xMy40NDQsMTAuMjEzYy0wLjI4NSwwLTAuNTY4LTAuMTIxLTAuNzY2LTAuMzU1CgkJYy0wLjM1NS0wLjQyMi0wLjMwMi0xLjA1MywwLjEyLTEuNDA5YzEuNTk4LTEuMzQ2LDMuMzItMi41NTksNS4xMjItMy42MDVjMC40NzMtMC4yNzgsMS4wODktMC4xMTYsMS4zNjYsMC4zNjIKCQljMC4yNzgsMC40NzgsMC4xMTUsMS4wOS0wLjM2MiwxLjM2N2MtMS43MDEsMC45ODgtMy4zMjgsMi4xMzQtNC44MzcsMy40MDVDMTMuOSwxMC4xMzYsMTMuNjcsMTAuMjEzLDEzLjQ0NCwxMC4yMTN6IE01My4zNTUsNi42MzMKCQljLTAuMTY5LDAtMC4zNDEtMC4wNDMtMC40OTctMC4xMzNjLTEuNzExLTAuOTgzLTMuNTE3LTEuODIxLTUuMzY3LTIuNDljLTAuNTItMC4xODgtMC43ODgtMC43NjEtMC42MDEtMS4yOAoJCWMwLjE4OC0wLjUyLDAuNzYyLTAuNzg3LDEuMjgtMC42MDFjMS45NiwwLjcwOCwzLjg3MiwxLjU5NSw1LjY4NCwyLjYzN2MwLjQ3OSwwLjI3NSwwLjY0NSwwLjg4NiwwLjM2OSwxLjM2NQoJCUM1NC4wMzgsNi40NTMsNTMuNzAyLDYuNjMzLDUzLjM1NSw2LjYzM3ogTTIzLjkzMiw0LjEyM2MtMC40MDcsMC0wLjc5MS0wLjI1MS0wLjkzOS0wLjY1N2MtMC4xODktMC41MTksMC4wNzctMS4wOTMsMC41OTYtMS4yODMKCQljMS45NTctMC43MTcsMy45OTMtMS4yNjYsNi4wNDktMS42M2MwLjU1NS0wLjA5MiwxLjA2MywwLjI2NywxLjE1OSwwLjgxMWMwLjA5NywwLjU0NC0wLjI2NywxLjA2My0wLjgxLDEuMTU5CgkJYy0xLjk0MSwwLjM0NC0zLjg2MywwLjg2MS01LjcxMSwxLjUzOEMyNC4xNjMsNC4xMDMsMjQuMDQ2LDQuMTIzLDIzLjkzMiw0LjEyM3ogTTQxLjk0NSwyLjUxMWMtMC4wNTcsMC0wLjExMy0wLjAwNC0wLjE3MS0wLjAxNQoJCUMzOS44NjYsMi4xNjcsMzcuOTA3LDIsMzUuOTU0LDJjLTAuNTUzLDAtMS4wMzgtMC40NDctMS4wMzgtMWMwLTAuNTUzLDAuNDA5LTEsMC45NjItMXYxbDAuMDU3LTFjMC4wMDEsMCwwLjAwMiwwLDAuMDA0LDAKCQljMi4wODUsMCw0LjE1NiwwLjE3Nyw2LjE3NiwwLjUyNmMwLjU0NSwwLjA5NCwwLjkwOSwwLjYxMSwwLjgxNSwxLjE1NkM0Mi44NDUsMi4xNjgsNDIuNDIyLDIuNTExLDQxLjk0NSwyLjUxMXoiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4=");
+      top: -25px; }
+  .modules-search-beer .beer-show .label {
+    padding: 25px;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    text-align: right;
+    opacity: 0;
+    transition: opacity .4s ease;
+    padding: 10px;
+    z-index: 9;
+    font-weight: lighter;
+    line-height: 25px; }
+    .modules-search-beer .beer-show .label .name {
+      font-size: 31px;
+      margin-bottom: 5px; }
+    .modules-search-beer .beer-show .label .City {
+      font-size: 25px;
+      margin-bottom: 5px; }
+    .modules-search-beer .beer-show .label .company,
+    .modules-search-beer .beer-show .label .alcohol {
+      font-size: 21px;
+      margin-bottom: 5px; }
+    .modules-search-beer .beer-show .label .tag {
+      font-size: 17px;
+      margin-bottom: 5px; }
+  .modules-search-beer .beer-show .bubbles {
+    opacity: 0;
+    transition: opacity .3s ease-out; }
+
+.modules-search-beer.open .circle-show:hover {
+  top: -15px !important; }
+
+.modules-search-beer.open .beer-show {
+  height: 50vh;
+  transition: height .5s ease; }
+
+.modules-search-beer.open .circle {
+  display: none; }
+
+.modules-search-beer.open .spin-half {
+  transform: none; }
+
+.modules-search-beer.open .label {
+  opacity: 1;
+  transition: opacity .4s ease; }
+
+.modules-search-beer.open .bubbles {
+  opacity: 1;
+  transition: opacity .3s ease-out; }
+
+.modules-search-beer md-autocomplete {
+  min-width: 140px;
+  width: 140px;
+  margin: auto;
+  border-radius: 0;
+  /*csslint important: false*/
+  /*csslint important: true*/ }
+  .modules-search-beer md-autocomplete button {
+    background-color: #222222;
+    margin-top: -28px;
+    position: absolute;
+    color: #222222;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    right: -35px; }
+    .modules-search-beer md-autocomplete button md-icon {
+      transform: translate3d(-50%, -50%, 0) scale(0.7); }
+  .modules-search-beer md-autocomplete input {
+    background-color: #222222 !important;
+    color: #fff;
+    font-family: "Microbrew One 3D W01 Regular", Helvetica, Arial;
+    border-bottom: 1px solid #fff !important;
+    font-size: 16px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    border-radius: 0 !important; }
+  .modules-search-beer md-autocomplete md-autocomplete-wrap {
+    box-shadow: none !important; }
+  .modules-search-beer md-autocomplete aria-status p {
+    display: none; }
+
+/* properties with the same value */
+.bubbles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(#fff, #fff 1%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0)); }
+
+.bubble {
+  z-index: 3;
+  position: absolute;
+  bottom: 100%;
+  background: radial-gradient(#fffbe6, #fffbe6 10%, #ffe34d), radial-gradient(#ffdf33, #ccac00);
+  border-radius: 50%; }
+  .bubble:nth-child(1) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.58s;
+    height: 5px;
+    left: 14%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(2) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.03s;
+    height: 11px;
+    left: 48%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(3) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.07s;
+    height: 21px;
+    left: 32%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(4) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.45s;
+    height: 17px;
+    left: 47%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(5) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.4s;
+    height: 10px;
+    left: 36%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(6) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.2s;
+    height: 1px;
+    left: 13%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(7) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.25s;
+    height: 11px;
+    left: 66%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(8) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.87s;
+    height: 4px;
+    left: 8%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(9) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 2.08s;
+    height: 23px;
+    left: 22%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(10) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.17s;
+    height: 32px;
+    left: 51%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(11) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.1s;
+    height: 31px;
+    left: 43%;
+    width: 31px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(12) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.07s;
+    height: 4px;
+    left: 1%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(13) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.97s;
+    height: 31px;
+    left: 29%;
+    width: 31px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(14) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.83s;
+    height: 4px;
+    left: 81%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(15) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.57s;
+    height: 6px;
+    left: 15%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(16) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.79s;
+    height: 14px;
+    left: 34%;
+    width: 14px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(17) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.69s;
+    height: 27px;
+    left: 75%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(18) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.55s;
+    height: 17px;
+    left: 82%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(19) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.8s;
+    height: 20px;
+    left: 68%;
+    width: 20px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(20) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 2.13s;
+    height: 22px;
+    left: 15%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(21) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.25s;
+    height: 12px;
+    left: 52%;
+    width: 12px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(22) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.18s;
+    height: 6px;
+    left: 20%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(23) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.05s;
+    height: 6px;
+    left: 71%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(24) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.69s;
+    height: 12px;
+    left: 51%;
+    width: 12px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(25) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.69s;
+    height: 27px;
+    left: 64%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(26) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.3s;
+    height: 22px;
+    left: 94%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(27) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.41s;
+    height: 15px;
+    left: 84%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(28) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.47s;
+    height: 31px;
+    left: 73%;
+    width: 31px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(29) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.94s;
+    height: 28px;
+    left: 24%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(30) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.16s;
+    height: 22px;
+    left: 65%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(31) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.95s;
+    height: 1px;
+    left: 15%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(32) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.8s;
+    height: 12px;
+    left: 99%;
+    width: 12px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(33) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.76s;
+    height: 23px;
+    left: 47%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(34) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.46s;
+    height: 21px;
+    left: 3%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(35) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.59s;
+    height: 21px;
+    left: 17%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(36) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.56s;
+    height: 15px;
+    left: 74%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(37) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.19s;
+    height: 8px;
+    left: 51%;
+    width: 8px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(38) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.11s;
+    height: 14px;
+    left: 52%;
+    width: 14px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(39) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.05s;
+    height: 16px;
+    left: 17%;
+    width: 16px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(40) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.05s;
+    height: 21px;
+    left: 96%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(41) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.46s;
+    height: 11px;
+    left: 78%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(42) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.15s;
+    height: 6px;
+    left: 32%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(43) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.26s;
+    height: 18px;
+    left: 35%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(44) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.05s;
+    height: 5px;
+    left: 72%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(45) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.05s;
+    height: 32px;
+    left: 10%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(46) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.74s;
+    height: 2px;
+    left: 31%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(47) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.88s;
+    height: 10px;
+    left: 28%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(48) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.5s;
+    height: 24px;
+    left: 52%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(49) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.93s;
+    height: 29px;
+    left: 68%;
+    width: 29px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(50) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.3s;
+    height: 15px;
+    left: 53%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(51) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.44s;
+    height: 22px;
+    left: 11%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(52) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.1s;
+    height: 11px;
+    left: 44%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(53) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.84s;
+    height: 6px;
+    left: 18%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(54) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.01s;
+    height: 4px;
+    left: 17%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(55) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.39s;
+    height: 24px;
+    left: 58%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(56) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.21s;
+    height: 25px;
+    left: 66%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(57) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.96s;
+    height: 7px;
+    left: 44%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(58) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.51s;
+    height: 18px;
+    left: 46%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(59) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.82s;
+    height: 5px;
+    left: 96%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(60) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.09s;
+    height: 6px;
+    left: 66%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(61) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.33s;
+    height: 26px;
+    left: 43%;
+    width: 26px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(62) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.49s;
+    height: 13px;
+    left: 43%;
+    width: 13px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(63) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.69s;
+    height: 2px;
+    left: 32%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(64) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.63s;
+    height: 10px;
+    left: 47%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(65) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.53s;
+    height: 3px;
+    left: 14%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(66) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.49s;
+    height: 3px;
+    left: 65%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(67) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.26s;
+    height: 15px;
+    left: 26%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(68) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.94s;
+    height: 13px;
+    left: 10%;
+    width: 13px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(69) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.74s;
+    height: 4px;
+    left: 72%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(70) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.06s;
+    height: 17px;
+    left: 75%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(71) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.57s;
+    height: 3px;
+    left: 25%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(72) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.66s;
+    height: 7px;
+    left: 98%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(73) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.21s;
+    height: 23px;
+    left: 86%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(74) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.33s;
+    height: 21px;
+    left: 59%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(75) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 2.2s;
+    height: 4px;
+    left: 67%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(76) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.18s;
+    height: 25px;
+    left: 29%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(77) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.31s;
+    height: 4px;
+    left: 6%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(78) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.56s;
+    height: 15px;
+    left: 36%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(79) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 2.1s;
+    height: 29px;
+    left: 56%;
+    width: 29px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(80) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.26s;
+    height: 21px;
+    left: 70%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(81) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.02s;
+    height: 21px;
+    left: 53%;
+    width: 21px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(82) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.67s;
+    height: 5px;
+    left: 51%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(83) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1s;
+    height: 30px;
+    left: 3%;
+    width: 30px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(84) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.96s;
+    height: 28px;
+    left: 27%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(85) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.83s;
+    height: 15px;
+    left: 85%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(86) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.17s;
+    height: 13px;
+    left: 94%;
+    width: 13px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(87) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.35s;
+    height: 24px;
+    left: 68%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(88) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.1s;
+    height: 10px;
+    left: 73%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(89) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 2.11s;
+    height: 12px;
+    left: 38%;
+    width: 12px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(90) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.36s;
+    height: 5px;
+    left: 67%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(91) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.59s;
+    height: 12px;
+    left: 36%;
+    width: 12px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(92) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.43s;
+    height: 30px;
+    left: 31%;
+    width: 30px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(93) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.68s;
+    height: 23px;
+    left: 17%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(94) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.78s;
+    height: 2px;
+    left: 36%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(95) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.19s;
+    height: 3px;
+    left: 50%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(96) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.01s;
+    height: 24px;
+    left: 86%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(97) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.76s;
+    height: 29px;
+    left: 27%;
+    width: 29px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(98) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 2.17s;
+    height: 14px;
+    left: 85%;
+    width: 14px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(99) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.09s;
+    height: 7px;
+    left: 74%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(100) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.65s;
+    height: 25px;
+    left: 24%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(101) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.42s;
+    height: 11px;
+    left: 41%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(102) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.14s;
+    height: 11px;
+    left: 37%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(103) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.22s;
+    height: 19px;
+    left: 79%;
+    width: 19px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(104) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.44s;
+    height: 3px;
+    left: 14%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(105) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.44s;
+    height: 4px;
+    left: 27%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(106) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.78s;
+    height: 5px;
+    left: 6%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(107) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.37s;
+    height: 30px;
+    left: 17%;
+    width: 30px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(108) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.42s;
+    height: 13px;
+    left: 74%;
+    width: 13px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(109) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.43s;
+    height: 1px;
+    left: 77%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(110) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.78s;
+    height: 25px;
+    left: 6%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(111) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.1s;
+    height: 3px;
+    left: 16%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(112) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.25s;
+    height: 32px;
+    left: 36%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(113) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.42s;
+    height: 25px;
+    left: 74%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(114) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.58s;
+    height: 5px;
+    left: 68%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(115) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.44s;
+    height: 14px;
+    left: 65%;
+    width: 14px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(116) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.71s;
+    height: 27px;
+    left: 85%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(117) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.75s;
+    height: 2px;
+    left: 45%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(118) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.04s;
+    height: 11px;
+    left: 30%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(119) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.83s;
+    height: 26px;
+    left: 5%;
+    width: 26px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(120) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.11s;
+    height: 31px;
+    left: 4%;
+    width: 31px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(121) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.16s;
+    height: 17px;
+    left: 10%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(122) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.46s;
+    height: 11px;
+    left: 100%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(123) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.69s;
+    height: 2px;
+    left: 43%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(124) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.27s;
+    height: 32px;
+    left: 43%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(125) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.36s;
+    height: 2px;
+    left: 51%;
+    width: 2px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(126) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.72s;
+    height: 19px;
+    left: 51%;
+    width: 19px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(127) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.64s;
+    height: 18px;
+    left: 84%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(128) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.99s;
+    height: 22px;
+    left: 50%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(129) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.64s;
+    height: 4px;
+    left: 53%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(130) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.5s;
+    height: 11px;
+    left: 26%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(131) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.8s;
+    height: 17px;
+    left: 21%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(132) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.43s;
+    height: 26px;
+    left: 39%;
+    width: 26px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(133) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.94s;
+    height: 27px;
+    left: 47%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(134) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.61s;
+    height: 7px;
+    left: 68%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(135) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.5s;
+    height: 27px;
+    left: 9%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(136) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.82s;
+    height: 3px;
+    left: 98%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(137) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.19s;
+    height: 23px;
+    left: 70%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(138) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.13s;
+    height: 17px;
+    left: 5%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(139) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.68s;
+    height: 25px;
+    left: 8%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(140) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.68s;
+    height: 24px;
+    left: 55%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(141) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 2.02s;
+    height: 17px;
+    left: 8%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(142) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.08s;
+    height: 18px;
+    left: 9%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(143) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.79s;
+    height: 10px;
+    left: 39%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(144) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.61s;
+    height: 32px;
+    left: 60%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(145) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.71s;
+    height: 10px;
+    left: 97%;
+    width: 10px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(146) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.87s;
+    height: 27px;
+    left: 46%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(147) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.52s;
+    height: 25px;
+    left: 76%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(148) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.96s;
+    height: 32px;
+    left: 50%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(149) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.77s;
+    height: 9px;
+    left: 38%;
+    width: 9px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(150) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.62s;
+    height: 26px;
+    left: 76%;
+    width: 26px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(151) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.42s;
+    height: 15px;
+    left: 17%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(152) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.19s;
+    height: 32px;
+    left: 62%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(153) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.27s;
+    height: 28px;
+    left: 96%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(154) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.1s;
+    height: 14px;
+    left: 89%;
+    width: 14px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(155) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.47s;
+    height: 3px;
+    left: 96%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(156) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.16s;
+    height: 28px;
+    left: 8%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(157) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.38s;
+    height: 30px;
+    left: 84%;
+    width: 30px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(158) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.26s;
+    height: 25px;
+    left: 44%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(159) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.13s;
+    height: 32px;
+    left: 5%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(160) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.13s;
+    height: 19px;
+    left: 22%;
+    width: 19px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(161) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.27s;
+    height: 30px;
+    left: 68%;
+    width: 30px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(162) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.16s;
+    height: 15px;
+    left: 15%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(163) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 2.12s;
+    height: 19px;
+    left: 51%;
+    width: 19px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(164) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.58s;
+    height: 5px;
+    left: 29%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(165) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 2.08s;
+    height: 27px;
+    left: 53%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(166) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.96s;
+    height: 5px;
+    left: 16%;
+    width: 5px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(167) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.68s;
+    height: 29px;
+    left: 47%;
+    width: 29px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(168) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.01s;
+    height: 28px;
+    left: 95%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(169) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.93s;
+    height: 3px;
+    left: 27%;
+    width: 3px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(170) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.02s;
+    height: 22px;
+    left: 99%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(171) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.91s;
+    height: 32px;
+    left: 78%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(172) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.76s;
+    height: 17px;
+    left: 70%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(173) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.88s;
+    height: 28px;
+    left: 75%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(174) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.91s;
+    height: 7px;
+    left: 37%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(175) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.68s;
+    height: 1px;
+    left: 61%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(176) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.24s;
+    height: 1px;
+    left: 8%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(177) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 0.42s;
+    height: 25px;
+    left: 97%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(178) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 1.05s;
+    height: 28px;
+    left: 55%;
+    width: 28px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(179) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 1.65s;
+    height: 17px;
+    left: 88%;
+    width: 17px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(180) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.85s;
+    height: 7px;
+    left: 73%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(181) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 2.06s;
+    height: 7px;
+    left: 59%;
+    width: 7px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(182) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.74s;
+    height: 32px;
+    left: 13%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(183) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.16s;
+    height: 27px;
+    left: 45%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(184) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.61s;
+    height: 20px;
+    left: 69%;
+    width: 20px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(185) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.89s;
+    height: 11px;
+    left: 62%;
+    width: 11px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(186) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.76s;
+    height: 32px;
+    left: 59%;
+    width: 32px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(187) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 2.22s;
+    height: 4px;
+    left: 47%;
+    width: 4px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(188) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 0.86s;
+    height: 24px;
+    left: 98%;
+    width: 24px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(189) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.73s;
+    height: 6px;
+    left: 91%;
+    width: 6px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(190) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.29s;
+    height: 27px;
+    left: 19%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(191) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 1.89s;
+    height: 18px;
+    left: 92%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(192) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.57s;
+    height: 22px;
+    left: 12%;
+    width: 22px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(193) {
+    animation: 5s bubble ease-in infinite;
+    animation-delay: 0.64s;
+    height: 25px;
+    left: 68%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(194) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 0.75s;
+    height: 25px;
+    left: 81%;
+    width: 25px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(195) {
+    animation: 4s bubble ease-in infinite;
+    animation-delay: 1.81s;
+    height: 18px;
+    left: 3%;
+    width: 18px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(196) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 2.14s;
+    height: 29px;
+    left: 32%;
+    width: 29px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(197) {
+    animation: 3s bubble ease-in infinite;
+    animation-delay: 2.03s;
+    height: 27px;
+    left: 25%;
+    width: 27px;
+    opacity: 0.6;
+    z-index: -1; }
+  .bubble:nth-child(198) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.63s;
+    height: 15px;
+    left: 94%;
+    width: 15px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(199) {
+    animation: 1s bubble ease-in infinite;
+    animation-delay: 0.5s;
+    height: 1px;
+    left: 41%;
+    width: 1px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+  .bubble:nth-child(200) {
+    animation: 2s bubble ease-in infinite;
+    animation-delay: 1.07s;
+    height: 23px;
+    left: 91%;
+    width: 23px;
+    opacity: 0.6;
+    z-index: -1;
+    opacity: 0.4;
+    z-index: -2; }
+
+@keyframes bubble {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 100%;
+    opacity: 0; } }

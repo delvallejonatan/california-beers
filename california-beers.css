@@ -59,7 +59,7 @@ html {
 
 body {
   font: 300 13px/1.6 'Microbrew One 3D W01 Regular', Helvetica, Arial;
-  background-image: url("../../assets/bg.png");
+  background-image: url("/california-beers/assets/bg.png");
   background-repeat: repeat;
   background-position: center;
   background-size: 450px;
@@ -70,9 +70,9 @@ body {
 
 @font-face {
   font-family: "Microbrew One 3D W01 Regular";
-  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot");
+  src: url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.eot");
   /* IE9*/
-  src: url("../../assets/font/e268f65b1679d62d682d7dfb61875008.eot?#iefix") format("embedded-opentype"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff2") format("woff2"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.woff") format("woff"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.ttf") format("truetype"), url("../../assets/font/e268f65b1679d62d682d7dfb61875008.svg#Microbrew One 3D W01 Regular") format("svg");
+  src: url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.eot?#iefix") format("embedded-opentype"), url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.woff2") format("woff2"), url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.woff") format("woff"), url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.ttf") format("truetype"), url("/california-beers/assets/font/e268f65b1679d62d682d7dfb61875008.svg#Microbrew One 3D W01 Regular") format("svg");
   /* iOS 4.1- */ }
 
 ::selection {
@@ -255,7 +255,7 @@ header {
     position: relative;
     bottom: 54px; }
     .modules-search-beer .content .container .bottle {
-      background-image: url("../../assets/bottle.png");
+      background-image: url("/california-beers/assets/bottle.png");
       background-repeat: no-repeat;
       background-size: 146px;
       width: 145px;
